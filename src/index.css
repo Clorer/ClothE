@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import url("./font/font.css");
+@theme {
+  --font-custom: "Beatrice Display Trial Regularecho "# ClothE" >> README.md", sans-serif;
+}
