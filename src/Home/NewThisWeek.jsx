@@ -1,5 +1,5 @@
-import DATA from "./../../assets/cloth.data.js"
-import { CardWithCloth } from "../../assets/CardWithCloth";
+import DATA from "../assets/cloth.data.js";
+import { CardWithCloth } from "./CardWithCloth.jsx";
 
 export function NewThisWeek() {
   return (
@@ -9,8 +9,11 @@ export function NewThisWeek() {
         <h1>THIS WEEK</h1>
       </div>
       <div className="mt-5 flex justify-between">
-        {DATA.slice(2).map((cloth) => (
-          <CardWithCloth DATA = {cloth} />
+        {(DATA ?? []).slice(2).map((cloth, idx) => (
+          <CardWithCloth
+            key={cloth?.id ?? `cloth-${idx}`}
+            DATA={cloth}
+          />
         ))}
       </div>
     </div>

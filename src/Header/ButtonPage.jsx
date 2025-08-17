@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
 export function ButtonPage({ page, selectedPage, setSelectedPage}) {
+  const navigate = useNavigate();
   return (
     <button
       id={page}
       onClick={() => {
-        console.log(page, selectedPage);
         setSelectedPage(page);
-        console.log(page, selectedPage);
+        if (page === "Home") {
+          navigate("/", { replace: true });
+        }
       }}
       className={` ${
         page === selectedPage ? "border-b-2" : "hover:opacity-60"

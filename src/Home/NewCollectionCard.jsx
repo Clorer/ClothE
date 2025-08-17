@@ -2,7 +2,7 @@ import Arrow from "../assets/Arrow.svg";
 
 export function NewCollectionCard() {
   return (
-    <div className="flex flex-col justify-between h-[22.5rem] w-[22.5rem] ">
+    <div className="flex flex-col justify-between h-[21.5rem] w-[21.5rem] ">
       <div className="flex gap-5 flex-col">
         <div className="text-5xl font-black leading-8">
           <h1>NEW</h1>
